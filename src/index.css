@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+
+
+body {
+  font-family: "Urbanist", sans-serif;
+  overflow-x: hidden;
+}
+
+.form-input {
+  @apply w-full flex justify-between text-sm text-black bg-gray-50/50 rounded px-4 py-2.5 mb-3 mt-1.5 border border-gray-200 hover:border-gray-300;
+}
+
+.form-submit-btn {
+  @apply w-full flex justify-center text-sm tracking-wider font-medium text-white bg-black py-2.5 rounded hover:bg-linear-to-r hover:from-indigo-400 hover:bg-indigo-500  cursor-pointer transition-colors;
+}
+
+.questions-loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 2px solid #FFF;
+  border-right: 5px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e6e6e6 50%,
+    #f0f0f0 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+
+.animate-text-shine {
+  background: linear-gradient(
+    to right,
+    #6366f1 0%,   /* indigo-500 */
+    #818cf8 50%,  /* indigo-400 */
+    #6366f1 100%  /* indigo-500 */
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob1 {
+  animation: blob 3s infinite ease-in-out;
+}
+
+.animate-blob2 {
+  animation: blob 4s infinite ease-in-out;
+}
+
+.animate-blob3 {
+  animation: blob 5s infinite ease-in-out;
+}
+
+.animate-blob4 {
+  animation: blob 6s infinite ease-in-out;
+}
